@@ -5,6 +5,7 @@
 <title>User Info</title>
 </head>
 <body>
+<a th:href="@{/sendPDF}">Send me a PDF file</a>
 <h1>Here is what I know about the current user</h1>
 Local Name: <span th:text= "${localName}"></span><br>
 Remote Addr: <span th:text= "${remoteAddr}"></span><br>
