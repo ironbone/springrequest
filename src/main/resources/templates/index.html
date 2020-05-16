@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>User Info</title>
+</head>
+<body>
+<h1>Here is what I know about the current user</h1>
+Local Name: <span th:text= "${localName}"></span><br>
+Remote Addr: <span th:text= "${remoteAddr}"></span><br>
+Remote Host: <span th:text= "${remoteHost}"></span><br>
+RequestURI: <span th:text= "${requestURI}"></span><br>
+Cookies: <div th:each = "cookie: ${cookies}">
+<span th:text= "*{cookie.name} + ': ' + *{cookie.value}"></span>
+</div>
+Headers: <div th:each = "name: ${headerNames}">
+<span th:text= "*{name}"></span>
+</div>
+</body>
+</html>
